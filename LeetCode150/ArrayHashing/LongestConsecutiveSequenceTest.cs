@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Shouldly;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,13 +9,14 @@ namespace LeetCode150.ArrayHashing;
 public class LongestConsecutiveSequenceTest
 {
     [Theory]
-    [InlineData(new int[] { 100, 4, 200, 1, 3, 2 }, 9)]
+    [InlineData(new int[] { 100, 4, 200, 1, 3, 2 }, 4)]
     public void LongestConsecutiveSequence(int[] nums, int expected)
     {
-
-        var res = 0;
+        // arrange
+        var result = 0;
+        // act
         if (nums.Length < 2)
-            res = nums.Length;
+            result = nums.Length;
 
         var set = new HashSet<int>(nums);
         var longest = 0;
@@ -30,8 +32,8 @@ public class LongestConsecutiveSequenceTest
                 }
             }
         }
-
-        res = longest;
-        Assert.Equal(expected, res);
+        result = longest;
+        // assert
+        result.ShouldBe(expected);
     }
 }
