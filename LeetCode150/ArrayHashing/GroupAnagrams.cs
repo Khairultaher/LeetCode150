@@ -1,12 +1,12 @@
 using LeetCode150.Configs;
 
-namespace LeetCode150;
+namespace LeetCode150.ArrayHashing;
 
 public class GroupAnagramsTest
 {
     [Theory]
     //[AutoMoqData]
-    [InlineData(new object[] { new string[] { "foo", "bar", "rab", "oof" } })]
+    [InlineData(new object[] { new string[] { "foo", "bar", "rab", "oof" }})]
     public void GroupAnagrams(string[] strs)
     {
         var groups = new Dictionary<string, IList<string>>();
@@ -27,7 +27,7 @@ public class GroupAnagramsTest
             groups[key].Add(s);
 
 
-            
+
         }
         var res = groups.Values.ToList();
 
@@ -36,10 +36,10 @@ public class GroupAnagramsTest
 
 
     [Theory]
-    [InlineData(new string[] { "foo" },"f")]
+    [InlineData(new string[] { "foo" }, "f")]
     //[InlineData(new object[] { new string[] { "foo" } })]
     public void StringArray_String(string[] array, string t
 )
-    { 
+    {
     }
 }
