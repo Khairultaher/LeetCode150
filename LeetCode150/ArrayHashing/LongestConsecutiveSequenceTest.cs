@@ -35,5 +35,6 @@ public class LongestConsecutiveSequenceTest
         result = longest;
         // assert
         result.ShouldBe(expected);
+
     }
 }
