@@ -1,6 +1,6 @@
-using LeetCode150.Configs;
+using NeetCode150.Configs;
 
-namespace LeetCode150.ArrayHashing;
+namespace NeetCode150.ArrayHashing;
 
 public class GroupAnagramsTest
 {

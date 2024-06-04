@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LeetCode150.TwoPointers;
+namespace NeetCode150.TwoPointers;
 public class Solution
 {
     [Theory]

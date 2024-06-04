@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LeetCode150.Stack;
+namespace NeetCode150.Stack;
 public class Solution
 {
     [Theory]

@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LeetCode150.ArrayHashing;
+namespace NeetCode150.ArrayHashing;
 public class ValidPalindromeTest
 {
     [Theory]

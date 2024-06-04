@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LeetCode150.Configs;
+namespace NeetCode150.Configs;
 public class AutoMoqDataAttribute : AutoDataAttribute
 {
     public AutoMoqDataAttribute()

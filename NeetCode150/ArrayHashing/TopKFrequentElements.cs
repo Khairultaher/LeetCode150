@@ -1,6 +1,6 @@
-using LeetCode150.Configs;
+using NeetCode150.Configs;
 
-namespace LeetCode150;
+namespace NeetCode150;
 
 public class TopKFrequentElementsTest
 {

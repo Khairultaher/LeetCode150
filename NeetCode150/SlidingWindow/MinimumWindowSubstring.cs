@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LeetCode150.SlidingWindow;
+namespace NeetCode150.SlidingWindow;
 
 public partial class Solution
 {
