@@ -18,4 +18,23 @@ public partial class Solution
         }
         expected.ShouldBe(maxProfit);
     }
+
+
+    [Theory]
+    [InlineData(new int[] { 7, 1, 5, 3, 6, 4 }, 5)]
+    public void MaxProfitUsingTowPointers(int[] prices, int expected) {
+        int l = 0, r = 1;
+        int maxProfit = 0;
+        while (r < prices.Length) {
+            if (prices[l] < prices[r]) {
+                int profit = prices[r] - prices[l];
+                maxProfit = Math.Max(maxProfit, profit);
+            }
+            else {
+                l = r;
+            }
+            r++;
+        }
+        expected.ShouldBe(maxProfit);
+    }
 }
