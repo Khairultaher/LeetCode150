@@ -19,9 +19,9 @@ public partial class Solution
 
         var countT = new Dictionary<char, int>();
         var window = new Dictionary<char, int>();
-
+        // add t to countT dic
         foreach (var c in t) {
-            AddCharToDictionary(c, countT);
+            countT.AddOrCountCharToDictionary(c);
         }
 
         var have = 0;
@@ -29,10 +29,11 @@ public partial class Solution
         var left = 0;
         var res = new[] { -1, -1 };
         var resultLength = int.MaxValue;
+
         for (var right = 0; right < s.Length; right++) {
             var c = s[right];
-            AddCharToDictionary(c, window);
-
+            window.AddOrCountCharToDictionary(c);
+           
             if (countT.ContainsKey(c) && window[c] == countT[c]) 
                 have++;
 
@@ -59,13 +60,6 @@ public partial class Solution
            : s.Substring(res[0], res[1] - res[0] + 1);
 
         actualres.ShouldBe(expected);
-    }
-
-    private void AddCharToDictionary(char c, IDictionary<char, int> dict) {
-        if (dict.ContainsKey(c))
-            dict[c]++;
-        else
-            dict.Add(c, 1);
     }
 }
 

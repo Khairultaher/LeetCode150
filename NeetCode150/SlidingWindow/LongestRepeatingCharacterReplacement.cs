@@ -5,7 +5,8 @@ public partial class Solution
 {
     [Theory]
     [InlineData("AABABBA", 1, 4)]
-    public void CharacterReplacement(string s, int k, int expected) {
+    public void LongestRepeatingCharacterReplacement(string s, int k, int expected) {
+
         int left = 0, maxLength = 0;
         int mostFrequentLetterCount = 0; // Count of most frequent letter in the window
         int[] charCounts = new int[26]; // Counts per letter
